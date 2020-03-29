@@ -1,8 +1,8 @@
 {
-  "name": "react-typescript-boilerplates",
+  "name": "storybook-design-system",
   "version": "0.1.0",
   "private": true,
-  "repository": "git@github.com/NancyBolstad/react-typescript-boilerplates.git",
+  "repository": "git@github.com/NancyBolstad/storybook-design-system.git",
   "author": "Nancy Bolstad <litchacha@gmail.com>",
   "license": "MIT",
   "dependencies": {
