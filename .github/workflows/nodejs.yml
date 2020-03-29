@@ -31,5 +31,3 @@ jobs:
         run: npm run build-storybook
         env:
           CI: true
-      - name: Pre-Deploy
-        run: npm run predeploy
