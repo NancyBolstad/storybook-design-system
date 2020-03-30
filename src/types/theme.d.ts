@@ -12,11 +12,19 @@ export interface ISpacing {
   xl: number;
 }
 
+export interface FontMediaQuery {
+  query: number;
+  family?: string;
+  weight?: number;
+  size?: number;
+  lineHeight?: number;
+}
 export interface Font {
   family: string;
   weight: number;
   size: number;
   lineHeight?: number;
+  mediaQueries?: FontMediaQuery[];
 }
 
 export interface IFonts {
@@ -33,7 +41,7 @@ export interface IFonts {
 
 export interface IFontFamily {
   primary: string;
-  secondary?: string;
+  secondary: string;
 }
 
 export interface IFontWeight {
@@ -46,15 +54,10 @@ export interface IColors {
   primary: string;
   primaryVariant: string;
   secondary: string;
-  secondaryVariant: string;
-  background: string;
-  surface: string;
-  error: string;
-  onPrimary: string;
-  onSecondary: string;
-  onBackground: string;
-  onSurface: string;
-  onError: string;
+  backgroundBlue: string;
+  backgroundGrey: string;
+  white: string;
+  black: string;
 }
 
 export interface Theme {
