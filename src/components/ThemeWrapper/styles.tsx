@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     -webkit-font-smoothing: antialiased;
     overflow-x:hidden;
-    color: ${props => props.theme.colors.onBackground};
-    ${props => createFontStyles(props.theme.fonts.b1)}
+    color: ${(props) => props.theme.colors.black};
+    ${(props) => createFontStyles(props.theme.fonts.b1)}
   }
   * {
     box-sizing: border-box;
