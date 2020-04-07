@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
+import { withA11y } from '@storybook/addon-a11y';
 import Typography from '.';
+import BackgroundBlue from '../../decorators/center';
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,13 +37,15 @@ const mockHeading6 = (
 );
 
 const VariantA = (
-  <Typography
-    content={`Span b1, algin:left: ${mockContent}`}
-    element="span"
-    variant="b1"
-    maxWidth={480}
-    isPrimaryColor
-  />
+  <BackgroundBlue>
+    <Typography
+      content={`Span b1, algin:left: ${mockContent}`}
+      element="span"
+      variant="b1"
+      maxWidth={480}
+      isPrimaryColor
+    />
+  </BackgroundBlue>
 );
 
 const VariantB = (
@@ -76,3 +80,26 @@ storiesOf('Component/Typography', module).add('Default', () => (
     {VariantC}
   </Wrapper>
 ));
+
+export default {
+  title: 'Text',
+  decorators: [
+    (storyFn: () => React.ReactNode) => <BackgroundBlue>{storyFn()}</BackgroundBlue>,
+    withA11y,
+  ],
+};
+
+export const defaultView = () => (
+  <Typography
+    content={`Paragraph b3, algin:right: ${mockContent}`}
+    element="p"
+    variant="b3"
+    maxWidth={680}
+  />
+);
+
+defaultView.story = {
+  parameters: {
+    notes: 'A small component',
+  },
+};

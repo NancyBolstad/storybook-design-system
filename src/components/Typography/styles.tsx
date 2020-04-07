@@ -31,8 +31,7 @@ export const Space = css<SpaceInterface>`
 `;
 
 export const Text = styled.p<Styles>`
-  color: ${(props) =>
-    props.isPrimaryColor ? props.theme.colors.primaryVariant : props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.black};
   ${(props) =>
     props.variant === 'b1' &&
     css`
